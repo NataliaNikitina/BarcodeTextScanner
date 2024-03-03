@@ -15,7 +15,7 @@ struct ContentView: View {
         switch vm.dataScannerAccessStatus {
         case .scannerAvailable:
             Text("Scanner is availible")
-        case .scannerNotAvailable
+        case .scannerNotAvailable:
             Text("Your device doesn't have support for scanning barcode with this app")
         case .cameraNotAvailable:
             Text("Your device doesn't have a camera")
