@@ -8,7 +8,7 @@ https://github.com/NataliaNikitina/BarcodeTextScanner/assets/107951213/10cbe3f1-
 
 ## Features
 - Barcodes scan (Barcode, QR Code, Aztec, etc)
-- Text scan with ability to select content type (all, url, phone, address, e-mail) 
+- Text scan with ability to select content type (all, url, phone number, address, e-mail) 
 - Using Apple VisionKit framework (so there's no 3rd party dependencies)
 
 ## Requierements
