@@ -12,6 +12,7 @@
 		C0CEA15B2B9415FF00C42756 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0CEA15A2B9415FF00C42756 /* Assets.xcassets */; };
 		C0CEA15E2B9415FF00C42756 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0CEA15D2B9415FF00C42756 /* Preview Assets.xcassets */; };
 		C0CEA1652B94172000C42756 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CEA1642B94172000C42756 /* AppViewModel.swift */; };
+		C0CEA1672B9456EF00C42756 /* DataScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CEA1662B9456EF00C42756 /* DataScannerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		C0CEA15A2B9415FF00C42756 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0CEA15D2B9415FF00C42756 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C0CEA1642B94172000C42756 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		C0CEA1662B9456EF00C42756 /* DataScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataScannerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				C0CEA1562B9415FE00C42756 /* BarcodeTextScannerApp.swift */,
 				C0CEA1642B94172000C42756 /* AppViewModel.swift */,
 				C0CEA1582B9415FE00C42756 /* ContentView.swift */,
+				C0CEA1662B9456EF00C42756 /* DataScannerView.swift */,
 				C0CEA15A2B9415FF00C42756 /* Assets.xcassets */,
 				C0CEA15C2B9415FF00C42756 /* Preview Content */,
 			);
@@ -143,6 +146,7 @@
 				C0CEA1592B9415FE00C42756 /* ContentView.swift in Sources */,
 				C0CEA1572B9415FE00C42756 /* BarcodeTextScannerApp.swift in Sources */,
 				C0CEA1652B94172000C42756 /* AppViewModel.swift in Sources */,
+				C0CEA1672B9456EF00C42756 /* DataScannerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

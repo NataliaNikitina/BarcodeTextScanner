@@ -15,6 +15,10 @@ struct BarcodeTextScannerApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(vm)
+                .task {
+                    await vm.requestDataScannerAccessStatus()
+                }
         }
     }
 }

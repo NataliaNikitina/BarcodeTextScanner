@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  BarcodeTextScanner
+//  BarcodeTextScanner  
 //
 //  Created by Tasha N on 02.03.2024.
 //

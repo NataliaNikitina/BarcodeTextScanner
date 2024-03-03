@@ -10,6 +10,10 @@ import SwiftUI
 import AVKit
 import VisionKit
 
+enum ScanType: String {
+    case barcode, text
+}
+
 enum DataScannerAccessStatusType {
     case notDetermined
     case cameraAccessNotGranted
@@ -22,6 +26,32 @@ enum DataScannerAccessStatusType {
 final class AppViewModel: ObservableObject {
     
     @Published var dataScannerAccessStatus: DataScannerAccessStatusType = .notDetermined
+    @Published var recognizedItems: [RecognizedItem] = []
+    @Published var scanType: ScanType = .barcode
+    @Published var textContentType: DataScannerViewController.TextContentType?
+    @Published var recognizesMultipleItems = true
+    
+    var recognizedDataType: DataScannerViewController.RecognizedDataType {
+        scanType == .barcode ? .barcode() : .text(textContentType: textContentType)
+    }
+    
+    var headerText: String {
+        if recognizedItems.isEmpty {
+            return "Scanning \(scanType.rawValue)"
+        } else {
+            return "Recognized \(recognizedItems.count) item(s)"
+        }
+    }
+    
+    var dataScannerViewId: Int {
+      var hasher = Hasher()
+      hasher.combine(scanType)
+      hasher.combine(recognizesMultipleItems)
+      if let textContentType {
+          hasher.combine(textContentType)
+      }
+      return hasher.finalize()
+  }
     
     private var isScannerAvailable: Bool {
         DataScannerViewController.isAvailable && DataScannerViewController.isSupported
@@ -48,6 +78,7 @@ final class AppViewModel: ObservableObject {
             } else {
                 dataScannerAccessStatus = .cameraAccessNotGranted
             }
+            
         default: break
             
         }
