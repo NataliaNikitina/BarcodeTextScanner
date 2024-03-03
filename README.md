@@ -1,5 +1,10 @@
 # Barcode & Text Scanner (SwiftUI, VisionKit)
-![Alt text](./promo.jpg "Barcode & Text Scanner iOS (SwiftUI, VisionKit)")
+
+
+https://github.com/NataliaNikitina/BarcodeTextScanner/assets/107951213/10cbe3f1-c219-4c6a-a065-1424ba311d9f
+
+
+
 
 ## Features
 - Barcodes scan (Barcode, QR Code, Aztec, etc)
