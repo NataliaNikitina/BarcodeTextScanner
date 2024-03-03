@@ -5,9 +5,9 @@
 //  Created by Tasha N on 02.03.2024.
 //
 
+import AVKit
 import Foundation
 import SwiftUI
-import AVKit
 import VisionKit
 
 enum ScanType: String {
@@ -43,21 +43,21 @@ final class AppViewModel: ObservableObject {
         }
     }
     
-    var dataScannerViewId: Int {
-      var hasher = Hasher()
-      hasher.combine(scanType)
-      hasher.combine(recognizesMultipleItems)
-      if let textContentType {
-          hasher.combine(textContentType)
-      }
-      return hasher.finalize()
-  }
+      var dataScannerViewId: Int {
+        var hasher = Hasher()
+        hasher.combine(scanType)
+        hasher.combine(recognizesMultipleItems)
+        if let textContentType {
+            hasher.combine(textContentType)
+        }
+        return hasher.finalize()
+    }
     
     private var isScannerAvailable: Bool {
         DataScannerViewController.isAvailable && DataScannerViewController.isSupported
     }
     
-    func requesrDataScannerAccessStatus() async {
+    func requestDataScannerAccessStatus() async {
         guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
             dataScannerAccessStatus = .cameraNotAvailable
             return
@@ -78,9 +78,11 @@ final class AppViewModel: ObservableObject {
             } else {
                 dataScannerAccessStatus = .cameraAccessNotGranted
             }
-            
+        
         default: break
             
         }
     }
+    
+    
 }

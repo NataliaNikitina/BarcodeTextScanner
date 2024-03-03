@@ -23,13 +23,13 @@ struct ContentView: View {
     var body: some View {
         switch vm.dataScannerAccessStatus {
         case .scannerAvailable:
-            Text("Scanner is availible")
-        case .scannerNotAvailable:
-            Text("Your device doesn't have support for scanning barcode with this app")
+            mainView
         case .cameraNotAvailable:
             Text("Your device doesn't have a camera")
+        case .scannerNotAvailable:
+            Text("Your device doesn't have support for scanning barcode with this app")
         case .cameraAccessNotGranted:
-            Text("Please, provide access to the camera in settings")
+            Text("Please provide access to the camera in settings")
         case .notDetermined:
             Text("Requesting camera access")
         }
@@ -108,4 +108,3 @@ struct ContentView: View {
         }
     }
 }
-
